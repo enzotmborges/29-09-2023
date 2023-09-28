@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css"> <!-- Link para o arquivo de estilos -->
+  <title>Jogo STOP</title>
+</head>
+<body>
+  <!-- Tela de login -->
+  <div id="login-screen">
+    <label for="username">Digite seu nome de usuário:</label>
+    <input type="text" id="username" placeholder="Seu nome de usuário">
+    <button onclick="startGame()">Começar o jogo</button>
+  </div>
+
+  <!-- Tela de sorteio de letra -->
+  <div id="letter-screen" style="display: none;">
+    <button onclick="drawLetter()">Sortear letra</button>
+    <div id="letter-display"></div>
+  </div>
+
+  <!-- Tela de regras -->
+  <div id="rules-screen" style="display: none;">
+    <h2>Regras</h2>
+    <ul>
+      <li>
+        Nome: <input type="text" id="input-nome" placeholder="Sua resposta para Nome">
+      </li>
+      <li>
+        CEP: <input type="text" id="input-cep" placeholder="Sua resposta para CEP">
+      </li>
+      <li>
+        Minha sogra é: <input type="text" id="input-sogra" placeholder="Sua resposta para Minha sogra é">
+      </li>
+      <li>
+        Fruta: <input type="text" id="input-fruta" placeholder="Sua resposta para Fruta">
+      </li>
+      <li>
+        Carro: <input type="text" id="input-carro" placeholder="Sua resposta para Carro">
+      </li>
+    </ul>
+    <button onclick="endGame()">STOP</button> <!-- Botão STOP para encerrar o jogo -->
+    <p id="random-letter"></p>
+  </div>
+
+  <script src="script.js"></script> <!-- Inclusão do script JavaScript -->
+</body>
+</html>
